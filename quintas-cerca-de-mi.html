@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="tf1XYCWEOV3yen0agGedL7ygGM1a_Nx0dleIkPflFV4" />
+
+    <title>Quintas Cerca de Mi Ubicación | midestinopy.com</title>
+    <meta name="description"
+        content="Búsqueda con GPS de quintas cerca de tu ubicación. Distancias exactas, quintas con pileta cerca de Asunción, San Lorenzo, Luque. ¡Probá gratis!">
+    <meta name="keywords"
+        content="quintas cerca de mi, quintas cerca de mi ubicación, quintas con pileta cerca, cabañas cerca de mi, alquiler quintas cerca, quintas paraguay cerca">
+
+    <link rel="canonical" href="https://midestinopy.com/quintas-cerca-de-mi.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://midestinopy.com/quintas-cerca-de-mi.html">
+    <meta property="og:title" content="Quintas Cerca de Mi Ubicación | midestinopy.com">
+    <meta property="og:description"
+        content="Encontrá quintas con pileta cerca de tu ubicación en Paraguay. GPS en tiempo real con distancias exactas.">
+    <meta property="og:image" content="https://midestinopy.com/assets/images/og-home.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quintas Cerca de Mi | midestinopy.com">
+    <meta name="twitter:description"
+        content="Encuentra quintas con pileta cerca de tu ubicación. GPS en tiempo real. San Lorenzo, Luque, Caacupé.">
+    <meta name="twitter:image" content="https://midestinopy.com/assets/images/og-home.jpg">
+
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo encontrar quintas cerca de mi ubicación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usa nuestro buscador con geolocalización. Solo permite el acceso a tu ubicación y verás todas las quintas disponibles en un radio de 20km con distancias exactas, precios y disponibilidad en tiempo real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántas quintas hay cerca de mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dependiendo de tu ubicación, midestinopy.com tiene entre 2 y 10 quintas en un radio de 10-20 km. En zonas como San Lorenzo, Luque y Caacupé hay mayor densidad de propiedades disponibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las quintas cerca de mi tienen piscina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El 100% de nuestras quintas y cabañas incluyen piscina. Puedes filtrar específicamente por esta amenidad en el buscador para ver solo propiedades con piscina cerca de tu ubicación."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .geo-hero {
+            background-color: var(--forest-green);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .btn-geo-large {
+            background-color: var(--white);
+            color: var(--forest-green);
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-geo-large:hover {
+            transform: scale(1.05);
+        }
+
+        .geo-results {
+            padding: 4rem 0;
+            min-height: 400px;
+        }
+
+        .distance-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--sunset-orange);
+            color: white;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            z-index: 10;
+        }
+
+        .faq-section {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #geo-status {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="https://forms.gle/umdEWtYT8Q2svku8A" class="btn-contact" target="_blank">Publicar mi
+                        propiedad</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="geo-hero">
+        <div class="container">
+            <h1>Alquiler de Quintas Cerca de Ti en Paraguay</h1>
+            <p class="subtitle">Usa nuestra herramienta con GPS para encontrar las quintas más cercanas a tu ubicación
+                actual</p>
+
+            <div class="geo-tool">
+                <button onclick="getLocation()" class="btn-geo-large">
+                    📍 Usar Mi Ubicación GPS
+                </button>
+                <p class="geo-help">Te mostraremos quintas en un radio de 20km con distancias exactas</p>
+
+                <div id="geo-status" class="geo-status"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="geo-results">
+        <div class="container">
+            <h2 id="results-title" style="display:none; text-align:center; margin-bottom: 2rem;">Resultados encontrados
+            </h2>
+            <div id="geo-results-grid" class="properties-grid">
+                <!-- Se llenan dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+
+            <div class="faq-item">
+                <h3>¿Cómo encontrar quintas cerca de mi ubicación?</h3>
+                <p>Haz clic en "Usar Mi Ubicación GPS" y el navegador te pedirá permiso para acceder a tu ubicación. Una
+                    vez permitido, verás automáticamente todas las quintas cercanas ordenadas por distancia con el
+                    número exacto de kilómetros.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Cuál es la quinta más cercana a mi?</h3>
+                <p>Las quintas se ordenan automáticamente por distancia cuando usas la geolocalización. La primera que
+                    aparece es siempre la más cercana a tu ubicación actual.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Las quintas cerca de mi tienen piscina?</h3>
+                <p>Sí, todas nuestras propiedades incluyen piscina. Además puedes filtrar por otras amenidades como
+                    quincho, capacidad o tipo de evento.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 midestinopy.com. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/properties-data.js"></script>
+    <script>
+        // Geo Logic local to this page
+        function getLocation() {
+            const statusDiv = document.getElementById('geo-status');
+            const resultsGrid = document.getElementById('geo-results-grid');
+            const resultsTitle = document.getElementById('results-title');
+
+            if (!navigator.geolocation) {
+                statusDiv.innerHTML = '❌ Tu navegador no soporta geolocalización';
+                return;
+            }
+
+            statusDiv.innerHTML = '📍 Detectando tu ubicación...';
+
+            navigator.geolocation.getCurrentPosition(
+                // Success
+                function (position) {
+                    const userLat = position.coords.latitude;
+                    const userLng = position.coords.longitude;
+
+                    statusDiv.innerHTML = `✅ Ubicación detectada. Calculando distancias...`;
+
+                    // Calcular distancias
+                    if (!window.propertiesData) return;
+
+                    const propertiesWithDistance = window.propertiesData.properties.map(property => {
+                        const distance = calculateDistance(
+                            userLat, userLng,
+                            property.latitude, property.longitude
+                        );
+                        return { ...property, distance };
+                    });
+
+                    // Ordenar por distancia
+                    propertiesWithDistance.sort((a, b) => a.distance - b.distance);
+
+                    // Mostrar resultados
+                    displayPropertiesWithDistance(propertiesWithDistance);
+                    resultsTitle.style.display = 'block';
+                },
+                // Error
+                function (error) {
+                    let msg = '❌ No pudimos detectar tu ubicación.';
+                    if (error.code === 1) msg = '❌ Necesitas permitir el acceso a tu ubicación.';
+                    statusDiv.innerHTML = msg;
+                    console.error('Error de geolocalización:', error);
+                }
+            );
+        }
+
+        function displayPropertiesWithDistance(properties) {
+            const grid = document.getElementById('geo-results-grid');
+            grid.innerHTML = '';
+
+            // Top 10 closest
+            const closest = properties.slice(0, 10);
+
+            closest.forEach(prop => {
+                const citySlug = prop.city.toLowerCase().replace(/ /g, '-').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u').replace(/ñ/g, 'n');
+                const propertyUrl = `quintas/${citySlug}/${prop.slug}.html`;
+
+                // Reusing card logic but simpler for inline
+                const imageSrc = prop.images && prop.images.length > 0 ? prop.images[0] : 'assets/images/placeholders/default.jpg';
+
+                const card = document.createElement('article');
+                card.className = 'property-card';
+                card.innerHTML = `
+                    <div class="property-image-container">
+                        <img src="${imageSrc}" alt="${prop.name}">
+                        <div class="distance-badge">${prop.distance.toFixed(1)} km</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">${prop.name}</h3>
+                        <p class="property-location">📍 ${prop.city}</p>
+                        <div class="property-footer">
+                            <span style="font-size:0.9rem; color:var(--forest-green);">A ${prop.distance.toFixed(1)} km de ti</span>
+                            <a href="${propertyUrl}" class="btn-card">Ver más →</a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // km
+            const dLat = toRad(lat2 - lat1);
+            const dLon = toRad(lon2 - lon1);
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c;
+        }
+
+        function toRad(degrees) {
+            return degrees * (Math.PI / 180);
+        }
+    </script>
+</body>
+
+</html>

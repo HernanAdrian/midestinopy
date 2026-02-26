@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+node_modules/
+.env
+*.zip
+OPTIMIZACIONES_COMPLETADAS.md
+OPTIMIZACION_100_COMPLETADA.md
