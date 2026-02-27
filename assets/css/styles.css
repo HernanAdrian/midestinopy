@@ -1665,3 +1665,422 @@ section {
         font-size: 1.3rem;
     }
 }
+
+/* ============================================
+   ENHANCED BLOG STYLES (2026)
+   ============================================ */
+
+/* Blog Inline CTA - Within Article Content */
+.blog-inline-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, var(--light-green) 0%, #d4edda 100%);
+    border: 1px solid rgba(14, 78, 58, 0.12);
+    border-left: 4px solid var(--forest-green);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.blog-inline-cta:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.blog-inline-cta-content {
+    flex: 1;
+}
+
+.blog-inline-cta-content h4 {
+    color: var(--forest-green);
+    font-size: 1.05rem;
+    margin: 0 0 0.35rem;
+    font-weight: 700;
+}
+
+.blog-inline-cta-content p {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.blog-inline-cta .blog-cta-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    padding: 0.65rem 1.25rem;
+}
+
+.blog-inline-cta-final {
+    background: linear-gradient(135deg, var(--forest-green) 0%, var(--leaf-green) 100%);
+    border-left: 4px solid var(--sunset-orange);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0 1rem;
+}
+
+.blog-inline-cta-final .blog-inline-cta-content h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.blog-inline-cta-final .blog-inline-cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Blog Destinations Table */
+.blog-destinations-table {
+    margin: 2rem 0;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.blog-destinations-table h3 {
+    background: var(--forest-green);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.blog-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.blog-content table thead {
+    background: var(--light-green);
+}
+
+.blog-content table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--forest-green);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--forest-green);
+}
+
+.blog-content table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.blog-content table tbody tr:hover {
+    background: rgba(230, 245, 239, 0.5);
+}
+
+.blog-content table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Blog Features Grid - For Romance Post */
+.blog-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.blog-feature-item {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.blog-feature-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.blog-feature-item h4 {
+    color: var(--forest-green);
+    font-size: 0.95rem;
+    margin: 0 0 0.3rem;
+}
+
+.blog-feature-item p {
+    color: var(--gray);
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Blog Adventure Card - For Adventure Post */
+.blog-adventure-card {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.blog-adventure-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.blog-difficulty {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.blog-difficulty-easy {
+    background: #d4edda;
+    color: #155724;
+}
+
+.blog-difficulty-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.blog-difficulty-hard {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.blog-adventure-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    background: var(--light-gray);
+    border-radius: 50px;
+}
+
+/* Blog Checklist */
+.blog-checklist {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.blog-checklist h4 {
+    color: var(--forest-green);
+    font-size: 1rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-green);
+}
+
+.blog-checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-checklist li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.blog-checklist li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--forest-green);
+    font-weight: 700;
+    font-size: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-green);
+    border-radius: 50%;
+    font-size: 0.7rem;
+}
+
+/* Blog Tag Variants */
+.blog-tag-romance {
+    background: #fce4ec;
+    color: #c62828;
+}
+
+.blog-tag-adventure {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+/* Enhanced Blog Card Hover Effects */
+.blog-card {
+    position: relative;
+}
+
+.blog-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--forest-green), var(--sky-blue));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Improved Blog Hero with gradient text accent */
+.blog-hero {
+    padding: 4rem 0 3rem;
+}
+
+.blog-hero .blog-tag {
+    margin-bottom: 0.75rem;
+}
+
+/* Blog CTA Card - Enhanced sidebar */
+.blog-cta-card {
+    background: linear-gradient(145deg, var(--forest-green) 0%, #0a3d2e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-cta-card::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.blog-cta-card::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+}
+
+.blog-cta-card h3 {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    border: none;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.blog-cta-card p {
+    position: relative;
+    z-index: 1;
+}
+
+.blog-cta-card .blog-cta-btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced Blog Sidebar Card */
+.blog-sidebar-card h3 {
+    color: var(--forest-green);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-green);
+}
+
+/* Blog Responsive Enhancements */
+@media (max-width: 768px) {
+    .blog-inline-cta {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .blog-inline-cta .blog-cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .blog-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-adventure-details {
+        gap: 0.5rem;
+    }
+
+    .blog-adventure-info {
+        font-size: 0.8rem;
+    }
+
+    .blog-inline-cta-final {
+        padding: 1.5rem;
+    }
+
+    .blog-content table {
+        font-size: 0.8rem;
+    }
+
+    .blog-content table th,
+    .blog-content table td {
+        padding: 0.6rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-adventure-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
