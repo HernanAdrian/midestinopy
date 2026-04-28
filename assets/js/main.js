@@ -197,3 +197,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// =============================================
+// GA4 EVENT TRACKING — WHATSAPP & CONTACT CLICKS
+// =============================================
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof gtag !== 'function') return;
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', () => {
+            // Extract property name from the prefilled WhatsApp text
+            const match = decodeURIComponent(link.href).match(/precio de (.+)$/);
+            const propertyName = match ? match[1] : 'unknown';
+
+            gtag('event', 'whatsapp_consulta_precio', {
+                property_name: propertyName,
+                page_path: window.location.pathname
+            });
+        });
+    });
+});
