@@ -199,20 +199,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // =============================================
-// GA4 EVENT TRACKING — WHATSAPP & CONTACT CLICKS
+// GA4 EVENT TRACKING — WHATSAPP, LLAMADA E INSTAGRAM
 // =============================================
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof gtag !== 'function') return;
 
+    const pagePath = window.location.pathname;
+
+    // Extrae el nombre de la propiedad del path de la URL
+    // Ej: /quintas/san-lorenzo/quinta-che-renda.html → "quinta-che-renda"
+    function getPropertyFromPath() {
+        const segments = pagePath.replace('.html', '').split('/').filter(Boolean);
+        return segments[segments.length - 1] || pagePath;
+    }
+
+    // 1. WhatsApp — boton CONOCER PRECIO
     document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
         link.addEventListener('click', () => {
-            // Extract property name from the prefilled WhatsApp text
             const match = decodeURIComponent(link.href).match(/precio de (.+)$/);
-            const propertyName = match ? match[1] : 'unknown';
-
-            gtag('event', 'whatsapp_consulta_precio', {
+            const propertyName = match ? match[1] : getPropertyFromPath();
+            gtag('event', 'click_whatsapp', {
+                button_type: 'whatsapp',
                 property_name: propertyName,
-                page_path: window.location.pathname
+                page_path: pagePath
+            });
+        });
+    });
+
+    // 2. Telefono — boton Llamar
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', () => {
+            gtag('event', 'click_llamar', {
+                button_type: 'telefono',
+                phone_number: link.href.replace('tel:', ''),
+                property_name: getPropertyFromPath(),
+                page_path: pagePath
+            });
+        });
+    });
+
+    // 3. Instagram — boton Ver en Instagram
+    document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+            gtag('event', 'click_instagram', {
+                button_type: 'instagram',
+                property_name: getPropertyFromPath(),
+                page_path: pagePath
             });
         });
     });
