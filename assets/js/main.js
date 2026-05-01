@@ -201,51 +201,36 @@ document.addEventListener('DOMContentLoaded', () => {
 // =============================================
 // GA4 EVENT TRACKING — WHATSAPP, LLAMADA E INSTAGRAM
 // =============================================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('click', function(e) {
     if (typeof gtag !== 'function') return;
 
-    const pagePath = window.location.pathname;
+    var link = e.target.closest('a[href]');
+    if (!link) return;
 
-    // Extrae el nombre de la propiedad del path de la URL
-    // Ej: /quintas/san-lorenzo/quinta-che-renda.html → "quinta-che-renda"
-    function getPropertyFromPath() {
-        const segments = pagePath.replace('.html', '').split('/').filter(Boolean);
-        return segments[segments.length - 1] || pagePath;
+    var href = link.href || '';
+    var pagePath = window.location.pathname;
+    var segments = pagePath.replace('.html', '').split('/').filter(Boolean);
+    var propertyName = segments[segments.length - 1] || pagePath;
+
+    if (href.indexOf('wa.me') !== -1) {
+        var match = decodeURIComponent(href).match(/precio de (.+)$/);
+        gtag('event', 'click_whatsapp', {
+            button_type: 'whatsapp',
+            property_name: match ? match[1] : propertyName,
+            page_path: pagePath
+        });
+    } else if (href.indexOf('tel:') === 0) {
+        gtag('event', 'click_llamar', {
+            button_type: 'telefono',
+            phone_number: href.replace('tel:', ''),
+            property_name: propertyName,
+            page_path: pagePath
+        });
+    } else if (href.indexOf('instagram.com') !== -1) {
+        gtag('event', 'click_instagram', {
+            button_type: 'instagram',
+            property_name: propertyName,
+            page_path: pagePath
+        });
     }
-
-    // 1. WhatsApp — boton CONOCER PRECIO
-    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-        link.addEventListener('click', () => {
-            const match = decodeURIComponent(link.href).match(/precio de (.+)$/);
-            const propertyName = match ? match[1] : getPropertyFromPath();
-            gtag('event', 'click_whatsapp', {
-                button_type: 'whatsapp',
-                property_name: propertyName,
-                page_path: pagePath
-            });
-        });
-    });
-
-    // 2. Telefono — boton Llamar
-    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-        link.addEventListener('click', () => {
-            gtag('event', 'click_llamar', {
-                button_type: 'telefono',
-                phone_number: link.href.replace('tel:', ''),
-                property_name: getPropertyFromPath(),
-                page_path: pagePath
-            });
-        });
-    });
-
-    // 3. Instagram — boton Ver en Instagram
-    document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
-        link.addEventListener('click', () => {
-            gtag('event', 'click_instagram', {
-                button_type: 'instagram',
-                property_name: getPropertyFromPath(),
-                page_path: pagePath
-            });
-        });
-    });
 });
